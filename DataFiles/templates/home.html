@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Análisis de Datos</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { width: 50%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Mi primera pagina web</h1>
+    <table>
+        <tr>
+            <th>Departamento</th>
+
+<th>Salario Promedio</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row['Department'] }}</td>
+            <td>${{ row['Salary'] | round(2) }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
